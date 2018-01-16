@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <Router>
                 <Route exact
-                       path="/CarSearch"
+                       path="/"
                        component={CarSearch}/>
             </Router>
 

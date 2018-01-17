@@ -1,19 +1,34 @@
 import React from 'react'
 
-class Cars extends React.Component{
+import CarsView from './CarsView'
+
+class Cars extends React.Component {
 
     state = {
         cars: null,
     }
-    componentDidMount(){
+
+    componentDidMount() {
         fetch(
             `${process.env.PUBLIC_URL}/MOCK_DATA.json`
+        ).then(
+            response => response.json()
+        ).then(
+            cars => this.setState({cars})
         )
-}
-    render(){
-        return(
-                <div>Siema</div>
+    }
+
+    render() {
+
+        const {cars} = this.state
+
+        return (
+            <div>
+                <h1>Cars</h1>
+                <CarsView/>
+            </div>
         );
     }
 }
+
 export default Cars

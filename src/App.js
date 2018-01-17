@@ -4,7 +4,7 @@ import {
     Route,
 } from 'react-router-dom'
 import {Grid} from 'react-bootstrap'
-import CarSearch from './Components/CarSearch/CarSearch'
+import CarsView from './Components/Cars/CarsView'
 import Cars from "./Components/Cars/Cars";
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
                 <Grid>
                 <Route exact
                        path="/"
-                       component={CarSearch}/>
+                       component={CarsView}/>
                 <Route exact
                        path="/"
                        component={Cars}/>

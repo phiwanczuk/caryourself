@@ -25,7 +25,7 @@ class Cars extends React.Component {
         return (
             <div>
                 <h1>Cars</h1>
-                <CarsView/>
+                <CarsView cars={cars}/>
             </div>
         );
     }

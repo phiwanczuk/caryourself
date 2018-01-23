@@ -7,13 +7,24 @@ import {
     FormGroup
 } from 'react-bootstrap'
 
-class CarSearch extends React.Component {
+class CarSearchForm extends React.Component {
+
+    handleChange = event => {
+        this.setState({
+            inputValue: event.target.value
+        })
+    }
+
+
     render() {
         return (
             <form>
                 <h2>Wybierz auto</h2>
                 <InputGroup>
-                    <FormControl/>
+                    <FormControl
+                    onChange={this.props.handleChange}
+                    type="text"
+                    />
                 </InputGroup>
             </form>
 
@@ -22,4 +33,4 @@ class CarSearch extends React.Component {
     }
 }
 
-export default CarSearch;
+export default CarSearchForm;

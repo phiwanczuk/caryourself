@@ -2,6 +2,7 @@ import React from 'react'
 
 import CarsView from './CarsView'
 
+
 class Cars extends React.Component {
 
     state = {
@@ -26,6 +27,7 @@ class Cars extends React.Component {
             <div>
                 <h1>Cars</h1>
                 <CarsView cars={cars}/>
+
             </div>
         );
     }

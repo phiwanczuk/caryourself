@@ -1,12 +1,27 @@
 import React from 'react'
 import CarSearchForm from './CarSearchForm'
+import InputRange from 'react-input-range'
+import 'react-input-range/lib/css/index.css'
 
 
 class CarsView extends React.Component {
 
 
     state = {
-        currentSearchPhrase: ''
+        currentSearchPhrase: '',
+        valueCapacity: {
+            min: 250,
+            max: 800
+        },
+        valueFuel: {
+            min: 4,
+            max: 15
+        },
+        valueSpeed: {
+            min: 150,
+            max: 240
+        }
+
     }
 
     handleSearchPhraseChange = event => {
@@ -37,7 +52,16 @@ class CarsView extends React.Component {
                     }
 
                 </ul>
+                <InputRange
+                    minValue={250}
+                    maxValue={800}
+                    value={this.state.valueCapacity}
+                    onChange={valueCapacity => this.setState({valueCapacity})}
+                />
             </div>
+
+
+
         )
     }
 }
